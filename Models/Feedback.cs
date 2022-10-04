@@ -11,13 +11,13 @@ namespace FeedBackForm.Models
         public int Id { get; set; }
         public string? Username { get; set; }
         public string? Email { get; set; }
-        
-        public string? Int_discussion { get; set; }
-        public string? IntTime { get; set; }
-        public string? Post { get; set; }
+        public string? timeofinterview { get; set; }
+        public string? disussion { get; set; }
+        public string? notes { get; set; }
         public decimal? Phoneno { get; set; }
-        public string? Topics { get; set; }
-        public string? Notes { get; set; }
+        public List<string>? topics { get; set; }
+        public string? posts { get; set; }
+
 
     }
 }

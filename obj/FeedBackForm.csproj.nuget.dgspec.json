@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hema/Downloads/FeedBackForm/FeedBackForm.csproj": {}
+    "/Users/hema/Documents/GitHub/FeedBackFormAPI/FeedBackForm.csproj": {}
   },
   "projects": {
-    "/Users/hema/Downloads/FeedBackForm/FeedBackForm.csproj": {
+    "/Users/hema/Documents/GitHub/FeedBackFormAPI/FeedBackForm.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hema/Downloads/FeedBackForm/FeedBackForm.csproj",
+        "projectUniqueName": "/Users/hema/Documents/GitHub/FeedBackFormAPI/FeedBackForm.csproj",
         "projectName": "FeedBackForm",
-        "projectPath": "/Users/hema/Downloads/FeedBackForm/FeedBackForm.csproj",
+        "projectPath": "/Users/hema/Documents/GitHub/FeedBackFormAPI/FeedBackForm.csproj",
         "packagesPath": "/Users/hema/.nuget/packages/",
-        "outputPath": "/Users/hema/Downloads/FeedBackForm/obj/",
+        "outputPath": "/Users/hema/Documents/GitHub/FeedBackFormAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/hema/.nuget/NuGet/NuGet.Config"
