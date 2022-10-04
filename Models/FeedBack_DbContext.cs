@@ -35,9 +35,7 @@ namespace FeedBackForm.Models
 
                 entity.Property(e => e.Id)
                     .HasColumnName("id")
-                    .HasColumnType("int(11)")
-                    .ValueGeneratedOnAdd()
-                    .HasDefaultValueSql( "nextval('hibernate_sequence'::regclass)" );
+                    .HasDefaultValueSql( "nextval('matrixlab.feedback_id_seq'::regclass)" );
 
                 entity.Property(e => e.Email)
                     .HasColumnType("character varying")
@@ -53,7 +51,7 @@ namespace FeedBackForm.Models
 
           
 
-            modelBuilder.HasSequence("hibernate_sequence", "matrixlab").StartsAt(100)
+            modelBuilder.HasSequence("feedback_id_seq", "matrixlab").StartsAt(100)
                     .IncrementsBy(1);
 
           
