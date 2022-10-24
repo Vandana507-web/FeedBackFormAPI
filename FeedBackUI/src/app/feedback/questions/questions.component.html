@@ -1,0 +1,45 @@
+<div class="form-control" [formGroup]="form">
+    <div formGroupName="{{ queFormGroup }}">
+        <div class="d-flex justify-content-start">
+            <div>
+                <h2>{{ questionLabel }}</h2>
+                <br />
+            </div>
+        </div>
+        <mat-form-field appearance="outline" *ngIf="queFormGroup != 'queFive'">
+            <mat-label>Select an option</mat-label>
+            <mat-select *ngIf="queFormGroup != 'queThree' && queFormGroup != 'queFour'"
+                formControlName="{{ queControlName }}" required disableRipple>
+                <mat-option *ngFor="let option of optionOne" value="{{ option }}">
+                    {{ option }}
+                </mat-option>
+            </mat-select>
+            <mat-select *ngIf="queFormGroup == 'queThree'" formControlName="{{ queControlName }}" required disableRipple
+                (ngModelChange)="change($event)"> <!--trigger every-->
+                <mat-option *ngFor="let option of optionTwo" value="{{ option }}">
+                    {{ option }}
+                </mat-option>
+            </mat-select>
+
+            <mat-select *ngIf="queFormGroup == 'queFour'" formControlName="{{ queControlName }}"
+                (click)="loadRepsonse()" required disableRipple multiple>
+                <mat-option *ngFor="let option of qFourOption" value="{{ option }}">
+                    {{ option }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field  *ngIf="queFormGroup == 'queFive'" class ="example-full-width" appearance ="outline" >
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput formControlName ='qFive'  placeholder="Ex.Interview experience ..."></textarea>
+        </mat-form-field>
+    </div>
+
+    <div class="example-button-row">
+        <button style="margin-left: 16px" example-button-row a mat-flat-button color="back" matStepperPrevious>
+            Back
+        </button>
+        <button style="margin-right: 126px" mat-flat-button color="next" matStepperNext>
+            Next
+        </button>
+    </div>
+</div>

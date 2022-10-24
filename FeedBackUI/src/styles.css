@@ -1,0 +1,95 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.form-control{
+    padding-left: 30% ;
+    padding-top: 5% ;
+}
+
+.mat-form-field{width:50%}
+
+.mat-button.mat-next,
+.mat-stroked-button.mat-next {
+    color: #1f1557;
+}
+
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+/* Success syling */
+
+.mat-button.mat-success,
+.mat-stroked-button.mat-success {
+    color: #151c57;
+}
+.mat-button.mat-success:hover,
+.mat-stroked-button.mat-success:hover {
+  background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-next,
+.mat-flat-button.mat-next,
+.mat-fab.mat-next,
+.mat-mini-fab.mat-next {
+  color: #f0fff3;
+  background-color: #1e07f3;
+}
+
+.mat-icon-button.mat-next {
+  color:#155724;
+}
+
+.mat-flat-button.mat-back,
+.mat-mini-fab.mat-back {
+  color: #f0fff3;
+  background-color: #020016;
+}
+.mat-flat-button.mat-submit {
+    color: #f0fff3;
+    background-color: #15a134;
+  }
+
+  mat-button-toggle {
+    border: 1px solid #f28628;
+    border-radius: 4px;
+    margin-left: 3px;
+    margin-right:3px;
+    width: 30px;
+    height: 30px;
+    font-family: 'Nunito Semibold', sans-serif;
+    font-size: 14px;
+    font-style: bold;
+}
+
+.mat-button-toggle-disabled {
+    border: 1px solid #c5c0c7;
+    background-color: #e1dde5;
+}
+
+div.center-text {
+    margin-left: -8px;
+    margin-top: -3px;
+}
+
+
+.mat-button-toggle-checked {
+  border: 1px solid #c5c0c7;
+  background-color: #e1dde5; 
+}
+.mat-card{
+  color:white;
+  background-color: #303F9F;
+  border-radius: 0px;
+  text-align:center;
+  font-size: 20px;
+  margin-top: 19%;
+}
+.mat-input-placeholder-wrapper {
+  top: -1em;
+  left:3em;
+}

@@ -1,0 +1,50 @@
+<form id="form" [formGroup]="feedBackForm">
+    <mat-stepper #stepper linear="true">
+        <mat-step formGroupName="personalDetail" [stepControl]="feedBackForm.get('personalDetail')! ">
+            <ng-template matStepLabel>Personal Details</ng-template>
+            <app-personal-details [form]="feedBackForm"></app-personal-details>
+        </mat-step>
+
+        <mat-step *ngFor="let step of stepsArray" formGroupName="{{step.formGroupName}}" [stepControl]="feedBackForm.get(step.formGroupName)! " label="{{step.label}}">
+            <ng-template matStepLabel>{{step.matStepLabel}}</ng-template>
+            <app-questions [form]="feedBackForm" [questionLabel]=step.questionLabel [queControlName]=step.queControlName [queFormGroup]=step.formGroupName></app-questions>
+        </mat-step>
+
+       <!--parent this component arent to child@ input -->
+        <!--child component is app-questions-->
+        <!-- <mat-step formGroupName="queOne" [stepControl]="feedBackForm.get('queOne')! " label="Fill out your Address">
+            <ng-template matStepLabel>Interview Time & Manner</ng-template>
+            <app-que-one [form]="feedBackForm"></app-que-one>
+        </mat-step>
+      
+        <mat-step formGroupName="queTwo" [stepControl]="feedBackForm.get('queTwo')! " label="Fill out your que 2">
+            <ng-template matStepLabel>Interview discussion on time</ng-template>
+            <app-que-two [form]="feedBackForm"></app-que-two>
+        </mat-step>
+       
+        <mat-step formGroupName="queThree" [stepControl]="feedBackForm.get('queThree')! " label="Fill out your que 3">
+            <ng-template matStepLabel>Posts you Applied </ng-template>
+            <app-que-three [form]="feedBackForm"></app-que-three>
+        </mat-step>
+
+       
+        <mat-step formGroupName="queFour" [stepControl]="feedBackForm.get('queFour')! " label="Fill out your que 4">
+            <ng-template matStepLabel>Topics Disussed </ng-template>
+            <app-que-four [form]="feedBackForm"></app-que-four>
+        </mat-step>
+
+
+      
+        <mat-step formGroupName="queFive" [stepControl]="feedBackForm.get('queFive')! " label="Fill out your que 5">
+            <ng-template matStepLabel>Feedback Comments</ng-template>
+            <app-que-five [form]="feedBackForm"></app-que-five>
+        </mat-step> -->
+       
+        <mat-step>
+            <ng-template matStepLabel>Preview</ng-template>
+
+            <app-preview [form]="feedBackForm"></app-preview>
+
+        </mat-step>
+    </mat-stepper>
+</form>

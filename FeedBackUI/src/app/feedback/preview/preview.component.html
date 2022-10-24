@@ -1,0 +1,52 @@
+<div  *ngIf="!formSubmitted">
+  <h4>Please verify before Submit</h4>
+  
+  
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Personal Detail
+        </mat-panel-title>
+        <mat-panel-description>
+          Review Peronsal Details
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Name: {{form.get('personalDetail')!.get('userName')!.value}} </p>
+      <p>Email: {{form.get('personalDetail')!.get('email')!.value}} </p>
+      <p>Phone No: {{form.get('personalDetail')!.get('phoneNo')!.value}} </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Interview Steps
+        </mat-panel-title>
+        <mat-panel-description>
+           {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Interview Time & Manner : {{form.get('queOne')!.get('qOne')!.value}}</p>
+      <p>Interview discussion on time : {{form.get('queTwo')!.get('qTwo')!.value}} </p>
+      <p>Posts you Applied: {{form.get('queThree')!.get('qThree')!.value}} </p>
+      <p>Topics Disussed  : {{form.get('queFour')!.get('qFour')!.value}} </p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Comments
+        </mat-panel-title>
+        <mat-panel-description>
+           {{panelOpenState ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>Comments : {{form.get('queFive')!.get('qFive')!.value}} </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
+  <div class="example-button-row">
+  <button mat-flat-button  color ="back" matStepperPrevious >Back </button>
+          <button mat-flat-button color="submit" (click)="openDialog('submit')" >Submit</button>
+        </div>
+  </div>
